@@ -5,7 +5,9 @@ variables:
   LC_ALL: C.UTF-8
 
 before_script:
-  - bundle install --full-index
+  - bundle update sass-listen
+  - bundle update jekyll-sass-converter
+  - bundle install
 
 test:
   stage: test

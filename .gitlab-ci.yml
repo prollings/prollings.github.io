@@ -6,6 +6,7 @@ variables:
 
 before_script:
   - bundle install
+  - bundle update sass-listen
 
 test:
   stage: test

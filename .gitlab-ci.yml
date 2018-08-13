@@ -5,8 +5,8 @@ variables:
   LC_ALL: C.UTF-8
 
 before_script:
-  - bundle install
   - bundle update sass-listen
+  - bundle install
 
 test:
   stage: test

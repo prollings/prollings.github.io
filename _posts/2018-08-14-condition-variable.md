@@ -70,7 +70,7 @@ int main()
 }
 {% endhighlight %}
 
-Let me explain the mechanism of the `condition_variable`:
+Let's go through that code step by step:
 1. Main thread starts thread 1
 2. Main thread calls `wait` on the `condition_variable` which blocks execution (it unlocks the `lock` that it's been given)
 3. `t1` starts

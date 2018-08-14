@@ -71,7 +71,7 @@ int main()
 {% endhighlight %}
 
 Let's go through that code step by step:
-1. Main thread starts thread 1
+1. Main thread starts thread 1 (`t1`)
 2. Main thread calls `wait` on the `condition_variable` which blocks execution (it unlocks the `lock` that it's been given)
 3. `t1` starts
 4. `t1` calls `notify_one`

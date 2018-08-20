@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Some C++20 Highlights
+title: "C++20: Designated Initialisers and Template Parameter Lists on Lambdas"
 tags: c++ c++20
 ---
 
-In this post I'm going to cherry pick a few stand-out (for me) C++20 features, and try to explain them.
+## In Short
 
-The list:
-* Designated Initialisers
-* Template parameter lists on lambdas
+Designated Initialisers let us tag values in initialisers so that we can see what they are, and be alerted when the members we're initialising change order.
+
+Template-able lambdas pretty much just let us stick template parameter lists to lambdas so that they behave like normal template functions.
 
 ## Designated Initialisers
 
 Or with a `Z`.
 
-Initialisers, you ask? What are they? These guys:
+Initialisers, as in these things:
 
 {% highlight cpp linenos %}
 struct SweetType {
@@ -29,9 +29,10 @@ int main() {
 }
 {% endhighlight %}
 
-You see, the values in the curly-braces are initialising the members of the `SweetType` object.
+The values in the curly-braces are initialising the members of the `SweetType` object.
 All well and good. Except that we need to remember the order in which the members are declared, otherwise we could be putting the wrong values into the wrong members.
-This is where designated initiali*z*ers come in handy; they essentially let us label the list with the names of the members.
+And if the member order in the struct is changed, we have to find and change all the initialisers without the compiler's help, or just let the wrong values go into the wrong members.
+This is where designated initiali**z**ers come in handy; they essentially let us label the list with the names of the members.
 
 {% highlight cpp linenos %}
     SweetType st{
@@ -56,9 +57,11 @@ Despite having to be in declaration order, we *can* skip members like so:
     };
 {% endhighlight %}
 
+The skipped members are then default initialised.
+
 ## Template Parameter Lists on Lambdas
 
-C++14 introduced generic lambdas by using the `auto` keyword as types in their parameter lists, as such:
+C++14 introduced generic lambdas by using the `auto` keyword in place of types in their parameter lists, as such:
 
 {% highlight cpp linenos %}
 int main() {
@@ -67,17 +70,24 @@ int main() {
     auto gl = [](auto x, auto y, auto z) {
         return x + y + z;
     };
-    std::cout << gl(1, 2, 3) << "\n";
-    std::cout << gl(1, 2, 3.3) << "\n";
-    std::cout << gl("1"s, "2"s, "3"s) << "\n";
+    std::cout << gl(1, 2, 3) << "\n"; // (int)(int, int, int)
+    std::cout << gl(1, 2, 3.3) << "\n"; // (double)(int, int, double)
+    std::cout << gl("1"s, "2"s, "3"s) << "\n"; // all std::strings
 }
 {% endhighlight %}
 
-There are two different versions of the `gl` lambda there. One that takes all `int`s, and the other that takes all `std::string`s.
-Of course we can also mix and match the types here, as long as `operator+` is defined for the combination.
-All that happens is that a new version of that `gl` is instantiated for each different combination of argument types.
+There are three different versions of the `gl` lambda there.
+1. takes all `int`s, returns an `int`
+2. takes two `ints`, and a `double`, returns a `double`
+3. takes all `std::string`s, returns a `std::string`
 
-If we want to ([to use the paper's example](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r1.pdf)) define a lambda that is constrained to taking a `std::vector` of any type, or use a static member of a type? We can't easily do either with the `auto` syntax. So suddenly templates become very useful:
+A new version of that `gl` is instantiated for each different combination of argument types.
+As long as `operator+` is defined for whichever combination of types we use, it'll work.
+
+[To use the paper's examples](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r1.pdf),
+we can't easily define a lambda that is constrained to taking a `std::vector` of any type,
+or use a static member of a type with the `auto` syntax.
+So suddenly templates become very useful:
 
 {% highlight cpp linenos %}
 int main() {
@@ -91,4 +101,4 @@ int main() {
 }
 {% endhighlight %}
 
-And, as a bonus, if we were to redefine `gl(x, y ,z)` from the `auto` example, as a template with `T` in place of `auto`, we can be assured that all parameters are the same type, if that's what we want... Just like real template functions...
+This basically just makes it a lot nicer, and more familiar, to write generic lambdas.

@@ -1,0 +1,10 @@
+- load pdf in inkscape
+- go to doc properties and:
+-- set scale to 0.1
+-- resize canvase to selection
+- make bitmap copy of pdf
+- delete pdf object
+- trace bitmap on the bitmap object
+- delete bitmap object
+- break apart new path object
+- separate any words that are joined vertically

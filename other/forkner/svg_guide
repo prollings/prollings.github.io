@@ -1,4 +1,9 @@
-tool: caligraphy
-stroke: 0.165mm, relative to zoom
-zoom: 1584%
-colour: red
+- `inkscape -f <in> -e <out>.png -d 588.5`
+-- takes a pdf and exports it at 588.5dpi as a png
+- open png in inkscape
+- trace bitmap with threshold of 0.001
+- delete bitmap and select vector object
+- break apart
+-- this will make any word/character with a hole get filled in
+- select all parts of word and regroup
+-- this will un-fill the holes

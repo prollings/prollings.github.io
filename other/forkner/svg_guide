@@ -17,3 +17,7 @@ when two words are joined vertically:
 - join selected end nodes with new segment (top bar)
 - make selected nodes auto-smooth (top bar)
 - do the same for the flat edge of the other word
+- select word bodies (not the holes)
+- move word body to bottom
+- then select whole word
+- join objects

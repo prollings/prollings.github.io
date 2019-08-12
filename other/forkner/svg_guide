@@ -7,6 +7,8 @@
 -- this will make any word/character with a hole get filled in
 - select all parts of word and regroup
 -- this will un-fill the holes
+- save as inkscape svg
+- then as an optimised svg in the opt_svgs folder
 
 when two words are joined vertically:
 - select the first pair of points from each word

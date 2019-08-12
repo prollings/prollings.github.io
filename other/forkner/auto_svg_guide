@@ -1,10 +1,9 @@
-- load pdf in inkscape
-- go to doc properties and:
--- set scale to 0.1
--- resize canvase to selection
-- make bitmap copy of pdf
-- delete pdf object
-- trace bitmap on the bitmap object
-- delete bitmap object
-- break apart new path object
-- separate any words that are joined vertically
+- `inkscape -f <in> -e <out>.png -d 588.5`
+-- takes a pdf and exports it at 588.5dpi as a png
+- open png in inkscape
+- trace bitmap with threshold of 0.001
+- delete bitmap and select vector object
+- break apart
+-- this will make any word/character with a hole get filled in
+- select all parts of word and regroup
+-- this will un-fill the holes

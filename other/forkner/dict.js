@@ -52,6 +52,7 @@
     }
 
     window.onload = () => {
+        search_box.disabled = true;
         fetch("./assets/manifest.txt")
             .then(res => res.text())
             .then(res => manifest_loaded(res))

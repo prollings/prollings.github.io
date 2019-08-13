@@ -17,4 +17,4 @@ github_username:  prollings
 
 # Build settings
 markdown: kramdown
-exclude: ["README.md"]
+exclude: [node_modules, "README.md"]

@@ -36,8 +36,7 @@
                 .then(res => image_loaded(v, res));
             promises.push(promise);
         });
-        Promise.all(promises)
-            .then(() => console.log("ohai there, log"));
+        return Promise.all(promises);
     }
 
     function search(text) {
@@ -52,7 +51,11 @@
     window.onload = () => {
         fetch("./assets/manifest.txt")
             .then(res => res.text())
-            .then(res => manifest_loaded(res));
+            .then(res => manifest_loaded(res))
+            .then(res => {
+                search_box.disabled = false;
+                search_box.placeholder = "Search dictionary...";
+            });
 
         search_box.onchange = () => {
             search(search_box.value);

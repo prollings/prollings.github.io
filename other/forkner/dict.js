@@ -1,5 +1,6 @@
 (() => {
     let search_box = document.getElementById("search_box");
+    let img_box = document.getElementById("img_box");
     let imgs = {};
 
     function image_loaded(file_name, img) {
@@ -26,7 +27,7 @@
         };
     }
 
-    function manifest_loaded (manifest) {
+    function manifest_loaded(manifest) {
         manifest.split('\n').forEach((v, idx) => {
             fetch("./assets/dict/" + v)
                 .then(res => res.blob())
@@ -38,6 +39,7 @@
         text = text.toLowerCase();
         let result = imgs[text];
         if (result) {
+            img_box.blob = result.img;
             console.log("pn: ", result.proper_noun, " abv: ", result.abv);
         }
     }

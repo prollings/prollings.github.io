@@ -41,7 +41,7 @@
         let result = imgs[text];
         if (result) {
             img_box.src = result.img;
-            console.log("pn: ", result.proper_noun, " abv: ", result.abv, " url: ", result.img);
+            console.log(result);
         }
     }
 

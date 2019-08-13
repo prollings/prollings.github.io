@@ -20,6 +20,8 @@
             word = word.toLowerCase();
         }
 
+        img = URL.createObjectURL(img);
+
         imgs[word] = {
             img: img,
             abv: is_abv,
@@ -39,7 +41,7 @@
         text = text.toLowerCase();
         let result = imgs[text];
         if (result) {
-            img_box.blob = result.img;
+            img_box.src = result.img;
             console.log("pn: ", result.proper_noun, " abv: ", result.abv);
         }
     }

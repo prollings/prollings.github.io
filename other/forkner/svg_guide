@@ -1,3 +1,4 @@
+converting pdf to png to svg:
 - `inkscape -f <in> -e <out>.png -d 588.5`
 -- takes a pdf and exports it at 588.5dpi as a png
 - open png in inkscape
@@ -23,3 +24,6 @@ when two words are joined vertically:
 - move word body to bottom
 - then select whole word
 - join objects
+
+unpack words into individual svgs:
+- run the `sep_svg.py` script with the file number (101 - 127) as the arg

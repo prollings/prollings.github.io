@@ -45,6 +45,9 @@
         if (result) {
             img_box.src = result.img;
             console.log(result);
+        } else {
+            search_box.classList.add("flash");
+            search_box.classList.remove("flash");
         }
     }
 

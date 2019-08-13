@@ -1,6 +1,6 @@
 (() => {
     function manifest_loaded (manifest) {
-        manifest.split('\n').forEach(v, idx =>{
+        manifest.split('\n').forEach((v, idx) => {
             console.log("file" + v);
         });
     } 

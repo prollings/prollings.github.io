@@ -7,9 +7,10 @@
         if (file_name == "") {
             return;
         }
+        
         let word = file_name.split('.')[0];
         let is_abv = word.endsWith("_abv");
-        
+
         if (is_abv) {
             word = word.split('_')[0];
         }

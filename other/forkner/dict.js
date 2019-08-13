@@ -1,8 +1,9 @@
 (() => {
-    let file = new XMLHttpRequest();
-    file.open("GET", "./assets/manifest.txt");
-    file.onreadystatechange = () => {
-        let allText = file.responseText;
-        console.log(allText);
-    };
+    function manifest_loaded (manifest) {
+        console.log(manifest);
+    } 
+
+    fetch("./assets/manifest.txt")
+        .then(res => res.text())
+        .then(res => manifest_loaded(res));
 })();

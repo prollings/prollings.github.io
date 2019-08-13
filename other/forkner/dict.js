@@ -48,7 +48,7 @@
             .then(res => manifest_loaded(res));
 
         search_box.onchange = () => {
-            console.log(search_box.text);
+            search(search_box.value);
         };
     };
 })();

@@ -55,6 +55,7 @@
             .then(res => {
                 search_box.disabled = false;
                 search_box.placeholder = "Search dictionary...";
+                search_box.focus();
             });
 
         search_box.onchange = () => {

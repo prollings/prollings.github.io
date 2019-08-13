@@ -45,8 +45,8 @@
         if (result) {
             img_box.src = result.img;
         } else {
+            search_box.classList.remove("flash");
             search_box.classList.add("flash");
-            //search_box.classList.remove("flash");
         }
     }
 

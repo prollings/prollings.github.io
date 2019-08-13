@@ -1,4 +1,5 @@
 (() => {
+    let search_box = document.getElementById("search_box");
     let imgs = new Object;
 
     function image_loaded(file_name, img) {
@@ -21,9 +22,13 @@
         });
     } 
 
-    window.onload(() => {
+    window.onload = () => {
         fetch("./assets/manifest.txt")
             .then(res => res.text())
             .then(res => manifest_loaded(res));
-    });
+
+        search_box.onchange = () => {
+            console.log(search_box.text);
+        };
+    };
 })();

@@ -2,7 +2,7 @@
     var client = new XMLHttpRequest();
     client.open('GET', '/assets/manifest.txt');
     client.onreadystatechange = function() {
-        alert(client.responseText);
+        console.log(client.responseText);
     }
     client.send();
 })();

@@ -2,14 +2,24 @@
     <header>
     </header>
     <body>
-        <div style="display: flex; flex-direction: column;">
-            <div>
+        <div class="main_box">
+            <div class="inside">
                 <input id="search_box" type="text" placeholder="Search dictionary...">
             </div>
-            <div>
+            <div class="inside">
                 <img id="img_box" />
             </div>
         </div>
     </body>
     <script src="dict.js"></script>
+    <style>
+        .main_box {
+            padding: 20;
+            display: flex;
+            flex-direction: column;
+        }
+        .inside {
+            padding: 20;
+        }
+    </style>
 </html>

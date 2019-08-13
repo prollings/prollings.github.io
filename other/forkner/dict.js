@@ -45,9 +45,8 @@
         if (result) {
             img_box.src = result.img;
         } else {
-            console.log("trying to flash");
-            search_box.classList.remove("flash");
             search_box.classList.add("flash");
+            setTimeout(() => search_box.classList.remove("flash"), 100);
         }
     }
 

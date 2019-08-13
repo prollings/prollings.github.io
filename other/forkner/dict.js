@@ -42,7 +42,7 @@
         let result = imgs[text];
         if (result) {
             img_box.src = result.img;
-            console.log("pn: ", result.proper_noun, " abv: ", result.abv);
+            console.log("pn: ", result.proper_noun, " abv: ", result.abv, " url: ", img);
         }
     }
 

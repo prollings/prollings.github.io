@@ -21,7 +21,9 @@
         });
     } 
 
-    fetch("./assets/manifest.txt")
-        .then(res => res.text())
-        .then(res => manifest_loaded(res));
+    window.onload(() => {
+        fetch("./assets/manifest.txt")
+            .then(res => res.text())
+            .then(res => manifest_loaded(res));
+    });
 })();

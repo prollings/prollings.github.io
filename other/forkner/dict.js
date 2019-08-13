@@ -5,12 +5,21 @@
     function image_loaded(file_name, img) {
         let word = file_name.split('.')[0];
         let is_abv = word.endsWith("_abv");
+        
         if (is_abv) {
             word = word.split('_')[0];
         }
+        
+        let proper_noun = word[0] != word[0].toLowerCase();
+        
+        if (proper_noun) {
+            word = word.toLowerCase();
+        }
+
         imgs[word] = {
             img: img,
             abv: is_abv,
+            proper_noun: proper_noun,
         };
     }
 
@@ -20,7 +29,15 @@
                 .then(res => res.blob())
                 .then(res => image_loaded(v, res));
         });
-    } 
+    }
+
+    function search(text) {
+        text = text.toLowerCase();
+        let result = imgs[text];
+        if (result) {
+            console.log("pn: ", result.proper_noun, " abv: ", result.abv);
+        }
+    }
 
     window.onload = () => {
         fetch("./assets/manifest.txt")

@@ -1,16 +1,23 @@
 (() => {
-    let imgs = new Array;
+    let imgs = new Object;
 
-    function image_loaded(img) {
-        imgs.push(img);
-        console.log(img);
+    function image_loaded(file_name, img) {
+        let word = file_name.split('.')[0];
+        let is_abv = word.endsWith("_abv");
+        if (is_abv) {
+            word = word.split('_')[0];
+        }
+        imgs[word] = {
+            img: img,
+            abv: is_abv,
+        };
     }
 
     function manifest_loaded (manifest) {
         manifest.split('\n').forEach((v, idx) => {
             fetch("./assets/dict/" + v)
                 .then(res => res.blob())
-                .then(res => image_loaded(res));
+                .then(res => image_loaded(v, res));
         });
     } 
 

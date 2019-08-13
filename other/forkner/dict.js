@@ -1,6 +1,8 @@
 (() => {
     function manifest_loaded (manifest) {
-        console.log(manifest);
+        manifest.split('\n').forEach(v, idx =>{
+            console.log("file" + v);
+        });
     } 
 
     fetch("./assets/manifest.txt")

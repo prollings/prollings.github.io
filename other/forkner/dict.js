@@ -29,11 +29,15 @@
     }
 
     function manifest_loaded(manifest) {
+        let promises = [];
         manifest.split('\n').forEach((v, idx) => {
-            fetch("./assets/dict/" + v)
+            let promise = fetch("./assets/dict/" + v)
                 .then(res => res.blob())
                 .then(res => image_loaded(v, res));
+            promises.push(promise);
         });
+        Promise.all(promises)
+            .then(() => console.log("ohai there, log"));
     }
 
     function search(text) {

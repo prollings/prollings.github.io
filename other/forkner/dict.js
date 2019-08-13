@@ -1,8 +1,11 @@
 (() => {
     let search_box = document.getElementById("search_box");
-    let imgs = new Object;
+    let imgs = {};
 
     function image_loaded(file_name, img) {
+        if (file_name == "") {
+            return;
+        }
         let word = file_name.split('.')[0];
         let is_abv = word.endsWith("_abv");
         

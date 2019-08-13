@@ -4,29 +4,27 @@
     let imgs = {};
 
     function image_loaded(file_name, img) {
+        // lower case of word and remove symbols and abv marker
+        // store original word (with capital and/or apostrophe) in `display`
         if (file_name == "") {
             return;
         }
-        
         let word = file_name.split('.')[0];
         let is_abv = word.endsWith("_abv");
-
         if (is_abv) {
             word = word.split('_')[0];
         }
-        
+        let display = word;
         let proper_noun = word[0] != word[0].toLowerCase();
-        
         if (proper_noun) {
             word = word.toLowerCase();
         }
-
         img = URL.createObjectURL(img);
-
         imgs[word] = {
             img: img,
             abv: is_abv,
             proper_noun: proper_noun,
+            display: display,
         };
     }
 

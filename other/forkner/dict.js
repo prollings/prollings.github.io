@@ -1,7 +1,7 @@
 (() => {
     let search_box = document.getElementById("search_box");
     let img_box = document.getElementById("img_box");
-    let word_caption = doctument.getElementById("word_caption");
+    let word_caption = document.getElementById("word_caption");
     let imgs = {};
 
     function image_loaded(file_name, img) {

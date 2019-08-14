@@ -44,10 +44,10 @@
         text = text.toLowerCase();
         let result = imgs[text];
         if (result) {
-            word_caption.innerHtml = result.display;
+            word_caption.innerHTML = result.display;
             img_box.src = result.img;
         } else {
-            word_caption.innerHtml = "";
+            word_caption.innerHTML = "";
             img_box.src = "";
         }
     }

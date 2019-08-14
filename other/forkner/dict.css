@@ -6,6 +6,11 @@
     margin: 0 auto;
     width: 100%;
 }
+@media only screen and (max-width: 768px) {
+    .main_box {
+        width: 100%;
+    }
+}
 .inside {
     flex: 1 1 auto;
     margin: 5px;

@@ -46,8 +46,6 @@
             img_box.src = result.img;
         } else {
             img_box.src = "";
-            document.classList.add('flash_animation');
-            setTimeout(() => document.classList.remove('flash_animation'), 1000);
         }
     }
 

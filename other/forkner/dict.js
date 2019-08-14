@@ -1,6 +1,7 @@
 (() => {
     let search_box = document.getElementById("search_box");
     let img_box = document.getElementById("img_box");
+    let word_caption = doctument.getElementById("word_caption");
     let imgs = {};
 
     function image_loaded(file_name, img) {
@@ -43,8 +44,10 @@
         text = text.toLowerCase();
         let result = imgs[text];
         if (result) {
+            word_caption.innerHtml = display;
             img_box.src = result.img;
         } else {
+            word_caption.innerHtml = "";
             img_box.src = "";
         }
     }

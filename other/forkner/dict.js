@@ -44,7 +44,7 @@
         text = text.toLowerCase();
         let result = imgs[text];
         if (result) {
-            word_caption.innerHtml = display;
+            word_caption.innerHtml = result.display;
             img_box.src = result.img;
         } else {
             word_caption.innerHtml = "";

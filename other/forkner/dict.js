@@ -39,7 +39,7 @@
             create_word_element(search_word, metadata[search_word]);
         }
         // get containing words
-        for (let check_word in metadata {
+        for (let check_word in metadata) {
             if (check_word.includes(search_word)) {
                 create_word_element(check_word, metadata[check_word]);
             }

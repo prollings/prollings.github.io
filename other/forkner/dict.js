@@ -10,7 +10,7 @@
         let wn_img_container = cce(word_node, 'div');
         let wn_img = cce(wn_img_container, 'img');
 
-        word_node.className = "word_box";
+        word_node.className = "word_box inside";
         wn_text.className = "word_text";
         if (metadata.hasOwnProperty("display")) {
             wn_text.innerHTML = metadata["display"];

@@ -28,8 +28,8 @@
         let to_destroy = document.getElementsByClassName("word_box");
 
         for (let td of to_destroy) {
-            //mb.removeChild(td);
-            document.removeChild(td);
+            mb.removeChild(td);
+            td.remove();
         }
     }
 

@@ -6,11 +6,9 @@
         let cce = (parent, child_type) => parent.appendChild(document.createElement(child_type));
         let mb = document.getElementById("main_box");
         let word_node = cce(mb, 'div');
-        let wn_text = cce(word_node, 'p');
-        let wn_img_container = cce(word_node, 'div');
-        let wn_img = cce(wn_img_container, 'img');
-
         word_node.className = "word_box inside";
+
+        let wn_text = cce(word_node, 'p');
         wn_text.className = "word_text";
         if (metadata.hasOwnProperty("display")) {
             wn_text.innerHTML = metadata["display"];
@@ -18,7 +16,10 @@
             wn_text.innerHTML = word;
         }
 
+        let wn_img_container = cce(word_node, 'div');
         wn_img_container.className = "word_img_container";
+        
+        let wn_img = cce(wn_img_container, 'img');
         wn_img.className = "word_img";
         wn_img.setAttribute('src', 'assets/dict/' + word + '.svg');
     }
@@ -28,8 +29,7 @@
         let to_destroy = document.getElementsByClassName("word_box");
 
         for (let td of to_destroy) {
-            mb.removeChild(td);
-            td.remove();
+            td.parentNode.removeChild(td);
         }
     }
 

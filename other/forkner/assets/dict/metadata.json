@@ -1,0 +1,1203 @@
+{
+  "a": {
+    "abv": true,
+    "chars": "a"
+  },
+  "ability": {
+    "chars": "a[B]"
+  },
+  "able": {
+    "chars": "abl"
+  },
+  "about": {
+    "abv": true,
+    "chars": "ab(ou)"
+  },
+  "above": {
+    "chars": "abuv"
+  },
+  "abroad": {
+    "chars": "avrod"
+  },
+  "absence": {
+    "chars": "abs[n]"
+  },
+  "absent": {
+    "chars": "abs(nt)"
+  },
+  "absolute": {
+    "chars": "absolut"
+  },
+  "absolutely": {
+    "chars": "absolut[ly]"
+  },
+  "accept": {
+    "abv": true,
+    "chars": "acsp"
+  },
+  "acceptable": {
+    "abv": true,
+    "chars": "acspbl"
+  },
+  "acceptance": {
+    "abv": true,
+    "chars": "acsp[n]"
+  },
+  "access": {
+    "chars": "ac(Z)"
+  },
+  "accident": {
+    "chars": "acsd(nt)"
+  },
+  "accommodate": {
+    "chars": "acmodat"
+  },
+  "accompanied": {
+    "chars": "acmpne[ed]"
+  },
+  "accomplished": {
+    "chars": "acmpl(sh)[ed]"
+  },
+  "accordance": {
+    "chars": "aco(R)[n]"
+  },
+  "according": {
+    "chars": "aco(R)(ng)"
+  },
+  "accordingly": {
+    "chars": "aco(R)(ng)[ly]"
+  },
+  "account": {
+    "abv": true,
+    "chars": "a[C]"
+  },
+  "accounts": {
+    "abv": true,
+    "chars": "a[C](s)"
+  },
+  "acknowledge": {
+    "abv": true,
+    "chars": "ac"
+  },
+  "acknowledgment": {
+    "chars": "ac(m)"
+  },
+  "acquaint": {
+    "chars": "aqa(nt)"
+  },
+  "acquaintance": {
+    "chars": "aqa(nt)[n]"
+  },
+  "across": {
+    "chars": "acros"
+  },
+  "act": {
+    "chars": "ac"
+  },
+  "action": {
+    "chars": "ac[tion]"
+  },
+  "active": {
+    "chars": "actv"
+  },
+  "activities": {
+    "chars": "actvte(s)"
+  },
+  "actual": {
+    "chars": "ac(ch)ul"
+  },
+  "actually": {
+    "chars": "ac(ch)u[ly]"
+  },
+  "ad": {
+    "abv": true,
+    "chars": "(A)"
+  },
+  "adapt": {
+    "chars": "(A)apt"
+  },
+  "adaptable": {
+    "chars": "(A)aptbl"
+  },
+  "add": {
+    "abv": true,
+    "chars": "(A)"
+  },
+  "added": {
+    "abv": true,
+    "chars": "(A)[ed]"
+  },
+  "addition": {
+    "chars": "(A)[tion]"
+  },
+  "additional": {
+    "chars": "(A)[tion]l"
+  },
+  "address": {
+    "chars": "(A)rs"
+  },
+  "addressed": {
+    "chars": "(A)rs[ed]"
+  },
+  "adequate": {
+    "chars": "(A)qt"
+  },
+  "adhere": {
+    "chars": "(A)er"
+  },
+  "adjourned": {
+    "chars": "ajrn[ed]"
+  },
+  "adjust": {
+    "chars": "aju(st)"
+  },
+  "adjustment": {
+    "chars": "aju(st)(m)"
+  },
+  "administration": {
+    "abv": true,
+    "chars": "(A)mn[tion]"
+  },
+  "administrative": {
+    "abv": true,
+    "chars": "(A)mntv"
+  },
+  "admire": {
+    "chars": "(A)mir"
+  },
+  "admission": {
+    "chars": "(A)m[tion]"
+  },
+  "admit": {
+    "chars": "(A)mit"
+  },
+  "adopted": {
+    "chars": "(A)op[ed]"
+  },
+  "advance": {
+    "chars": "(A)v[n]"
+  },
+  "advanced": {
+    "chars": "(A)v[n][ed]"
+  },
+  "advancement": {
+    "chars": "(A)v[n](m)"
+  },
+  "advantage": {
+    "chars": "(A)va(nt)j"
+  },
+  "adverse": {
+    "chars": "(A)vrs"
+  },
+  "advertise": {
+    "abv": true,
+    "chars": "(A)vr"
+  },
+  "advertisement": {
+    "abv": true,
+    "chars": "(A)vr(m)"
+  },
+  "advertising": {
+    "abv": true,
+    "chars": "(A)vr(ing)"
+  },
+  "advice": {
+    "chars": "(A)vis"
+  },
+  "advisable": {
+    "chars": "(A)vizbl"
+  },
+  "advise": {
+    "chars": "(A)viz"
+  },
+  "advised": {
+    "chars": "(A)viz[ed]"
+  },
+  "advising": {
+    "chars": "(A)viz(ing)"
+  },
+  "advocate": {
+    "chars": "(A)vocat"
+  },
+  "affair": {
+    "chars": "afar"
+  },
+  "affection": {
+    "chars": "afc[tion]"
+  },
+  "affectionate": {
+    "chars": "afc[tion]t"
+  },
+  "afford": {
+    "chars": "afo(R)"
+  },
+  "afraid": {
+    "chars": "afrad"
+  },
+  "after": {
+    "abv": true,
+    "chars": "af"
+  },
+  "afternoon": {
+    "abv": true,
+    "chars": "afnn"
+  },
+  "afterwards": {
+    "abv": true,
+    "chars": "af[w][w]"
+  },
+  "again": {
+    "chars": "agan"
+  },
+  "against": {
+    "chars": "agan(st)"
+  },
+  "age": {
+    "chars": "aj"
+  },
+  "agency": {
+    "chars": "aj[n]e"
+  },
+  "agent": {
+    "chars": "aj(nt)"
+  },
+  "ages": {
+    "chars": "aj(s)"
+  },
+  "ago": {
+    "abv": true,
+    "chars": "ag"
+  },
+  "agree": {
+    "abv": true,
+    "chars": "agr"
+  },
+  "agreeable": {
+    "abv": true,
+    "chars": "agrbl"
+  },
+  "agreed": {
+    "abv": true,
+    "chars": "agr[ed]"
+  },
+  "agreement": {
+    "abv": true,
+    "chars": "agr(m)"
+  },
+  "agriculture": {
+    "abv": true,
+    "chars": "agri"
+  },
+  "ahead": {
+    "chars": "ahd"
+  },
+  "aid": {
+    "chars": "ad"
+  },
+  "aim": {
+    "chars": "am"
+  },
+  "air": {
+    "chars": "ar"
+  },
+  "alive": {
+    "chars": "aliv"
+  },
+  "all": {
+    "abv": true,
+    "chars": "l"
+  },
+  "allow": {
+    "chars": "al(ow)"
+  },
+  "allowance": {
+    "chars": "al(ow)[nce]"
+  },
+  "allowed": {
+    "chars": "al(ow)[ed]"
+  },
+  "almost": {
+    "chars": "almo(st)"
+  },
+  "alone": {
+    "chars": "aln"
+  },
+  "along": {
+    "chars": "al(ng)"
+  },
+  "already": {
+    "abv": true,
+    "chars": "arde"
+  },
+  "also": {
+    "chars": "also"
+  },
+  "although": {
+    "chars": "altho"
+  },
+  "altogether": {
+    "abv": true,
+    "chars": "altu"
+  },
+  "always": {
+    "chars": "alws"
+  },
+  "am": {
+    "abv": true,
+    "chars": "m"
+  },
+  "ambition": {
+    "chars": "amb[tion]"
+  },
+  "american": {
+    "chars": "amrcn",
+    "display": "American"
+  },
+  "among": {
+    "chars": "amu(ng)"
+  },
+  "amount": {
+    "chars": "am(ou)(nt)"
+  },
+  "amounting": {
+    "chars": "am(ou)(nt)(ing)"
+  },
+  "amounts": {
+    "chars": "am(ou)(nt)(s)"
+  },
+  "ample": {
+    "chars": "ampl"
+  },
+  "an": {
+    "abv": true,
+    "chars": "(a)"
+  },
+  "analysis": {
+    "chars": "(an)al(sis)"
+  },
+  "anchor": {
+    "chars": "a(nc)r"
+  },
+  "ancient": {
+    "chars": "(an)(sh)(nt)"
+  },
+  "and": {
+    "abv": true,
+    "chars": "(nd)"
+  },
+  "angry": {
+    "chars": "a(ng)re"
+  },
+  "announcement": {
+    "chars": "(an)(ou)[nce](ment)"
+  },
+  "annoy": {
+    "chars": "(an)(oy)"
+  },
+  "annoyance": {
+    "chars": "(an)(oy)[nce]"
+  },
+  "annual": {
+    "chars": "(an)ul"
+  },
+  "another": {
+    "chars": "(an)(other)"
+  },
+  "answer": {
+    "chars": "(an)sr"
+  },
+  "answering": {
+    "chars": "(an)sr(ing)"
+  },
+  "anticipate": {
+    "chars": "[anti]spat"
+  },
+  "antidote": {
+    "chars": "[anti]dot"
+  },
+  "anxious": {
+    "chars": "a(nc)(sh)s"
+  },
+  "any": {
+    "chars": "(an)e"
+  },
+  "anybody": {
+    "chars": "(an)ebde"
+  },
+  "anyhow": {
+    "chars": "(an)eh(ow)"
+  },
+  "anyone": {
+    "chars": "(an)ewn"
+  },
+  "anything": {
+    "chars": "(an)e(thing)"
+  },
+  "anyway": {
+    "chars": "(an)ewa"
+  },
+  "anywhere": {
+    "chars": "(an)ewr"
+  },
+  "apartment": {
+    "chars": "ap(rt)(ment)"
+  },
+  "apparent": {
+    "chars": "apr(nt)"
+  },
+  "apparently": {
+    "chars": "apr(nt)[ly]"
+  },
+  "appeal": {
+    "chars": "apel"
+  },
+  "appear": {
+    "chars": "aper"
+  },
+  "appearance": {
+    "chars": "aper[nce]"
+  },
+  "appears": {
+    "chars": "aper(s)"
+  },
+  "appendicitis": {
+    "chars": "ap(nd)(citis)"
+  },
+  "application": {
+    "chars": "aplic[tion]"
+  },
+  "applied": {
+    "chars": "apli[ed]"
+  },
+  "apply": {
+    "chars": "apli"
+  },
+  "appoint": {
+    "chars": "ap(oi)(nt)"
+  },
+  "appointment": {
+    "chars": "ap(oi)(nt)(ment)"
+  },
+  "appreciate": {
+    "abv": true,
+    "chars": "apr(sh)"
+  },
+  "appreciated": {
+    "abv": true,
+    "chars": "apr(sh)[ed]"
+  },
+  "approval": {
+    "chars": "apruvl"
+  },
+  "approve": {
+    "chars": "apruv"
+  },
+  "approved": {
+    "chars": "apruv[ed]"
+  },
+  "approximate": {
+    "abv": true,
+    "chars": "aprx"
+  },
+  "april": {
+    "abv": true,
+    "chars": "apr",
+    "display": "April"
+  },
+  "are": {
+    "abv": true,
+    "chars": "r"
+  },
+  "arent": {
+    "abv": true,
+    "chars": "r(nt)",
+    "display": "aren't"
+  },
+  "argument": {
+    "chars": "argu(ment)"
+  },
+  "arm": {
+    "chars": "arm"
+  },
+  "army": {
+    "chars": "arme"
+  },
+  "around": {
+    "chars": "ar(ou)(nd)"
+  },
+  "arrange": {
+    "chars": "ar(nge)"
+  },
+  "arranged": {
+    "chars": "ar(nge)[ed]"
+  },
+  "arrangement": {
+    "chars": "ar(nge)(ment)"
+  },
+  "arrangements": {
+    "chars": "ar(nge)(ment)(s)"
+  },
+  "arrival": {
+    "chars": "arivl"
+  },
+  "arrive": {
+    "chars": "ariv"
+  },
+  "arrived": {
+    "chars": "ariv[ed]"
+  },
+  "art": {
+    "chars": "a(rt)"
+  },
+  "article": {
+    "chars": "a(rt)icl"
+  },
+  "articles": {
+    "chars": "a(rt)icl(s)"
+  },
+  "as": {
+    "chars": "as"
+  },
+  "ascertain": {
+    "chars": "as(rt)an"
+  },
+  "ashamed": {
+    "chars": "a(sh)am[ed]"
+  },
+  "aside": {
+    "abv": true,
+    "chars": "asi"
+  },
+  "ask": {
+    "chars": "asc"
+  },
+  "asked": {
+    "chars": "asc[ed]"
+  },
+  "asking": {
+    "chars": "asc(ing)"
+  },
+  "asleep": {
+    "chars": "aslep"
+  },
+  "assigned": {
+    "chars": "asin[ed]"
+  },
+  "assignment": {
+    "chars": "asin(ment)"
+  },
+  "assist": {
+    "chars": "a(sis)t"
+  },
+  "assistance": {
+    "chars": "a(sis)t[nce]"
+  },
+  "assistant": {
+    "chars": "a(sis)t(nt)"
+  },
+  "assisting": {
+    "chars": "a(sis)t(ing)"
+  },
+  "association": {
+    "chars": "aso(sh)[tion]"
+  },
+  "assortment": {
+    "chars": "aso(rt)(ment)"
+  },
+  "assume": {
+    "chars": "asum"
+  },
+  "assurance": {
+    "chars": "a(sh)ur[nce]"
+  },
+  "assure": {
+    "chars": "a(sh)ur"
+  },
+  "assured": {
+    "chars": "a(sh)ur[ed]"
+  },
+  "assuring": {
+    "chars": "a(sh)ur(ing)"
+  },
+  "at": {
+    "abv": true,
+    "chars": "t"
+  },
+  "ate": {
+    "chars": "at"
+  },
+  "atlantic": {
+    "chars": "atlantc",
+    "display": "Atlantic"
+  },
+  "attached": {
+    "chars": "ata(ch)[ed]"
+  },
+  "attachment": {
+    "chars": "ata(ch)(ment)"
+  },
+  "attack": {
+    "chars": "atac"
+  },
+  "attempt": {
+    "chars": "atmpt"
+  },
+  "attend": {
+    "chars": "at(nd)"
+  },
+  "attendance": {
+    "chars": "at(nd)[nce]"
+  },
+  "attention": {
+    "chars": "atn[tion]"
+  },
+  "attitude": {
+    "chars": "atitud"
+  },
+  "attourney": {
+    "chars": "atrne"
+  },
+  "attractive": {
+    "chars": "atractv"
+  },
+  "august": {
+    "abv": true,
+    "chars": "ag",
+    "display": "August"
+  },
+  "aunt": {
+    "chars": "a(nt)"
+  },
+  "author": {
+    "chars": "athr"
+  },
+  "authority": {
+    "chars": "ath[rity]"
+  },
+  "authorized": {
+    "chars": "athriz[ed]"
+  },
+  "auto": {
+    "chars": "ato"
+  },
+  "automobile": {
+    "abv": true,
+    "chars": "atmbl"
+  },
+  "avail": {
+    "chars": "aval"
+  },
+  "available": {
+    "chars": "avalbl"
+  },
+  "avenue": {
+    "chars": "avnu"
+  },
+  "average": {
+    "chars": "avrj"
+  },
+  "avoid": {
+    "chars": "av(oi)d"
+  },
+  "await": {
+    "chars": "[awa]t"
+  },
+  "awaiting": {
+    "chars": "[awa]t(ing)"
+  },
+  "award": {
+    "chars": "[awa](rd)"
+  },
+  "aware": {
+    "chars": "[awa]r"
+  },
+  "away": {
+    "abv": true,
+    "chars": "[awa]"
+  },
+  "awful": {
+    "chars": "afl"
+  },
+  "awfully": {
+    "chars": "af[ly]"
+  },
+  "awhile": {
+    "chars": "awil"
+  },
+  "baby": {
+    "chars": "babe"
+  },
+  "back": {
+    "chars": "bac"
+  },
+  "backward": {
+    "chars": "bac[ward]"
+  },
+  "bad": {
+    "chars": "bad"
+  },
+  "badly": {
+    "chars": "bad[ly]"
+  },
+  "bag": {
+    "chars": "bag"
+  },
+  "balance": {
+    "chars": "bal[nce]"
+  },
+  "ball": {
+    "chars": "bal"
+  },
+  "band": {
+    "chars": "ba(nd)"
+  },
+  "bank": {
+    "chars": "ba(nc)"
+  },
+  "banquet": {
+    "chars": "banqt"
+  },
+  "barn": {
+    "chars": "barn"
+  },
+  "barrel": {
+    "chars": "barl"
+  },
+  "base": {
+    "chars": "bas"
+  },
+  "baseball": {
+    "chars": "basbal"
+  },
+  "based": {
+    "chars": "bas[ed]"
+  },
+  "basement": {
+    "chars": "bas(ment)"
+  },
+  "basis": {
+    "chars": "ba(sis)"
+  },
+  "basket": {
+    "chars": "basct"
+  },
+  "basketball": {
+    "chars": "basctbal"
+  },
+  "bat": {
+    "chars": "bat"
+  },
+  "bath": {
+    "chars": "bath"
+  },
+  "battle": {
+    "chars": "batl"
+  },
+  "bay": {
+    "chars": "ba"
+  },
+  "be": {
+    "abv": true,
+    "chars": "b"
+  },
+  "beach": {
+    "chars": "be(ch)"
+  },
+  "bear": {
+    "chars": "bar"
+  },
+  "beat": {
+    "chars": "bet"
+  },
+  "beautiful": {
+    "chars": "butifl"
+  },
+  "beauty": {
+    "chars": "bute"
+  },
+  "became": {
+    "chars": "becam"
+  },
+  "because": {
+    "abv": true,
+    "chars": "cz"
+  },
+  "become": {
+    "chars": "becm"
+  },
+  "bed": {
+    "chars": "bd"
+  },
+  "bee": {
+    "chars": "be"
+  },
+  "been": {
+    "chars": "bn"
+  },
+  "before": {
+    "abv": true,
+    "chars": "bf"
+  },
+  "beg": {
+    "chars": "bg"
+  },
+  "began": {
+    "chars": "began"
+  },
+  "begin": {
+    "chars": "begin"
+  },
+  "beginning": {
+    "chars": "begin(ing)"
+  },
+  "begun": {
+    "chars": "begun"
+  },
+  "behalf": {
+    "chars": "behaf"
+  },
+  "behind": {
+    "chars": "behi(nd)"
+  },
+  "being": {
+    "abv": true,
+    "chars": "b(ing)"
+  },
+  "belief": {
+    "chars": "belef"
+  },
+  "believe": {
+    "chars": "belev"
+  },
+  "bell": {
+    "chars": "bl"
+  },
+  "belong": {
+    "chars": "bel(ng)"
+  },
+  "below": {
+    "chars": "belo"
+  },
+  "belt": {
+    "chars": "blt"
+  },
+  "benefit": {
+    "chars": "bnefit"
+  },
+  "beside": {
+    "chars": "besid"
+  },
+  "best": {
+    "chars": "b(st)"
+  },
+  "better": {
+    "chars": "btr"
+  },
+  "between": {
+    "chars": "betwn"
+  },
+  "beyond": {
+    "chars": "bey(nd)"
+  },
+  "bid": {
+    "chars": "bid"
+  },
+  "big": {
+    "chars": "big"
+  },
+  "bill": {
+    "chars": "bil"
+  },
+  "billed": {
+    "chars": "bil[ed]"
+  },
+  "bills": {
+    "chars": "bil(s)"
+  },
+  "biological": {
+    "chars": "bi[logical]"
+  },
+  "biology": {
+    "chars": "bi[logy]"
+  },
+  "bird": {
+    "chars": "b(rd)"
+  },
+  "birthday": {
+    "chars": "brthda"
+  },
+  "bit": {
+    "chars": "bit"
+  },
+  "black": {
+    "chars": "blac"
+  },
+  "blame": {
+    "chars": "blam"
+  },
+  "blank": {
+    "chars": "bla(nc)"
+  },
+  "bless": {
+    "chars": "bls"
+  },
+  "block": {
+    "chars": "bloc"
+  },
+  "blood": {
+    "chars": "blud"
+  },
+  "blow": {
+    "chars": "blo"
+  },
+  "blue": {
+    "chars": "blu"
+  },
+  "board": {
+    "chars": "bo(rd)"
+  },
+  "boat": {
+    "chars": "bot"
+  },
+  "body": {
+    "chars": "bode"
+  },
+  "bond": {
+    "chars": "bo(nd)"
+  },
+  "book": {
+    "chars": "buc"
+  },
+  "booklet": {
+    "chars": "buclt"
+  },
+  "books": {
+    "chars": "buc(s)"
+  },
+  "born": {
+    "chars": "born"
+  },
+  "borrow": {
+    "chars": "boro"
+  },
+  "both": {
+    "chars": "both"
+  },
+  "bother": {
+    "chars": "bothr"
+  },
+  "bottle": {
+    "chars": "botl"
+  },
+  "bottom": {
+    "chars": "botm"
+  },
+  "bought": {
+    "chars": "bot"
+  },
+  "bound": {
+    "chars": "b(ou)(nd)"
+  },
+  "box": {
+    "chars": "box"
+  },
+  "boy": {
+    "chars": "b(oy)"
+  },
+  "brakes": {
+    "chars": "brac(s)"
+  },
+  "branch": {
+    "chars": "bran(ch)"
+  },
+  "bread": {
+    "chars": "brd"
+  },
+  "break": {
+    "chars": "brac"
+  },
+  "breakfast": {
+    "chars": "brcf(st)"
+  },
+  "brick": {
+    "chars": "bric"
+  },
+  "bridge": {
+    "chars": "brij"
+  },
+  "brief": {
+    "chars": "bref"
+  },
+  "bright": {
+    "chars": "brit"
+  },
+  "bring": {
+    "chars": "br(ing)"
+  },
+  "bringing": {
+    "chars": "br(ing)(ing)"
+  },
+  "brings": {
+    "chars": "br(ing)(s)"
+  },
+  "broke": {
+    "chars": "broc"
+  },
+  "broken": {
+    "chars": "brocn"
+  },
+  "brother": {
+    "chars": "bruthr"
+  },
+  "brought": {
+    "chars": "brot"
+  },
+  "brown": {
+    "chars": "br(ow)n"
+  },
+  "build": {
+    "chars": "bild"
+  },
+  "building": {
+    "chars": "bild(ing)"
+  },
+  "built": {
+    "chars": "bilt"
+  },
+  "bulletin": {
+    "chars": "bultn"
+  },
+  "bunch": {
+    "chars": "bun(ch)"
+  },
+  "bureau": {
+    "chars": "buro"
+  },
+  "burn": {
+    "chars": "burn"
+  },
+  "business": {
+    "abv": true,
+    "chars": "bz"
+  },
+  "busy": {
+    "chars": "bize"
+  },
+  "but": {
+    "abv": true,
+    "chars": "b"
+  },
+  "butter": {
+    "chars": "butr"
+  },
+  "buy": {
+    "chars": "bi"
+  },
+  "by": {
+    "abv": true,
+    "chars": "b"
+  },
+  "cabinet": {
+    "chars": "cabnt"
+  },
+  "cake": {
+    "chars": "cac"
+  },
+  "calendar": {
+    "chars": "cal(nd)r"
+  },
+  "call": {
+    "chars": "cal"
+  },
+  "called": {
+    "chars": "cal[ed]"
+  },
+  "calling": {
+    "chars": "cal(ing)"
+  },
+  "calls": {
+    "chars": "cal(s)"
+  },
+  "came": {
+    "chars": "cam"
+  },
+  "camp": {
+    "chars": "camp"
+  },
+  "campaign": {
+    "chars": "campan"
+  },
+  "campus": {
+    "chars": "campus"
+  },
+  "can": {
+    "abv": true,
+    "chars": "c"
+  },
+  "cancel": {
+    "chars": "cansl"
+  },
+  "canceled": {
+    "chars": "cansl[ed]"
+  },
+  "cancellation": {
+    "chars": "cansl[tion]"
+  },
+  "candy": {
+    "chars": "ca(nd)e"
+  },
+  "cannot": {
+    "abv": true,
+    "chars": "cn"
+  },
+  "cant": {
+    "abv": true,
+    "chars": "c(nt)",
+    "display": "can't"
+  },
+  "capable": {
+    "chars": "capbl"
+  },
+  "capacity": {
+    "chars": "cap[city]"
+  },
+  "capital": {
+    "chars": "capitl"
+  },
+  "captain": {
+    "chars": "captn"
+  },
+  "car": {
+    "chars": "car"
+  },
+  "carbon": {
+    "chars": "carbn"
+  },
+  "card": {
+    "chars": "ca(rd)"
+  },
+  "cards": {
+    "chars": "ca(rd)(s)"
+  },
+  "care": {
+    "chars": "car"
+  },
+  "cared": {
+    "chars": "car[ed]"
+  },
+  "careful": {
+    "chars": "carfl"
+  },
+  "carefully": {
+    "chars": "carf[ly]"
+  },
+  "carload": {
+    "chars": "carlod"
+  },
+  "carried": {
+    "chars": "care[ed]"
+  },
+  "carry": {
+    "chars": "care"
+  }
+}

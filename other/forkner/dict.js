@@ -33,6 +33,7 @@
 
     function search(word) {
         let search_word = word.toLowerCase();
+        search_word.replace(/[^A-Za-z]/, '');
         // get exact match
         if (metadata.hasOwnProperty(search_word)) {
             create_word_element(search_word, metadata[search_word]);

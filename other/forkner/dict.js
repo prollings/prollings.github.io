@@ -2,7 +2,7 @@
     let search_box = document.getElementById("search_box");
     let metadata = {};
 
-    function create_word_element(word) {
+    function create_word_element(word, metadata) {
         let cce = (parent, child_type) => parent.appendChild(document.createElement(child_type));
         let mb = document.getElementById("main_box");
         let word_node = cce(mb, 'div');
@@ -32,12 +32,12 @@
         let word = word.toLowerCase();
         // get exact match
         if (metadata.hasOwnProperty(word)) {
-            create_word_element(word);
+            create_word_element(word, metadata[word]);
         }
         // get containing words
         for (let check_word of metadata.entries()) {
             if (check_word.includes(word)) {
-                create_word_element(check_word);
+                create_word_element(check_word, metadata[check_word]);
             }
         }
     }

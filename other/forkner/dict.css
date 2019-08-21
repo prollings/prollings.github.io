@@ -27,9 +27,9 @@
     padding: 10px;
     background-color: #f5f5f5;
 }
-.img_container {
+.word_img_container {
     padding: 40;
 }
-.img_box {
+.word_img {
     transform: scale(3);
 }

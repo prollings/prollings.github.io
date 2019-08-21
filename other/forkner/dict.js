@@ -1,5 +1,6 @@
 (() => {
     let search_box = document.getElementById("search_box");
+    let metadata = {};
 
     function create_word_element(word) {
         let cce = (parent, child_type) => parent.appendChild(document.createElement(child_type));
@@ -18,11 +19,34 @@
         wn_img.setAttribute('src', 'assets/dict/' + word + '.svg');
     }
 
+    function destroy_all_word_elements() {
+        let mb = document.getElementById("main_box");
+        let to_destroy = document.getElementsByClassName("word_box");
+
+        for (let td of to_destroy) {
+            mb.removeChild(td);
+        }
+    }
+
+    function search(word) {
+        let word = word.toLowerCase();
+        // get exact match
+        if (metadata.hasOwnProperty(word)) {
+            create_word_element(word);
+        }
+        // get containing words
+        for (let check_word of metadata.entries()) {
+            if (check_word.includes(word)) {
+                create_word_element(check_word);
+            }
+        }
+    }
+
     window.onload = () => {
         search_box.disabled = true;
-        fetch("./assets/manifest.txt")
-            .then(res => res.text())
-            .then(res => manifest_loaded(res))
+        fetch("./assets/metadata.json")
+            .then(res => res.json())
+            .then(res => metadata = res)
             .then(res => {
                 search_box.disabled = false;
                 search_box.placeholder = "Search dictionary...";
@@ -30,6 +54,7 @@
             });
 
         search_box.onchange = () => {
+            destroy_all_word_elements();
             search(search_box.value);
         };
     };

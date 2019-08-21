@@ -25,11 +25,9 @@
     }
 
     function destroy_all_word_elements() {
-        let mb = document.getElementById("main_box");
-        let to_destroy = document.getElementsByClassName("word_box");
-
-        for (let td of to_destroy) {
-            td.parentNode.removeChild(td);
+        while (document.getElementsByClassName("word_box").length) {
+            let tr = document.getElementsByClassName("word_box")[0];
+            tr.parent.removeChild(tr);
         }
     }
 

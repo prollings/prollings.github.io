@@ -12,7 +12,11 @@
 
         word_node.className = "word_box";
         wn_text.className = "word_text";
-        wn_text.innerHTML = word;
+        if (metadata.hasOwnProperty("display")) {
+            wn_text.innerHTML = metadata["display"];
+        } else {
+            wn_text.innerHTML = word;
+        }
 
         wn_img_container.className = "word_img_container";
         wn_img.className = "word_img";
@@ -44,7 +48,7 @@
 
     window.onload = () => {
         search_box.disabled = true;
-        fetch("./assets/metadata.json")
+        fetch("assets/dict/metadata.json")
             .then(res => res.json())
             .then(res => metadata = res)
             .then(res => {

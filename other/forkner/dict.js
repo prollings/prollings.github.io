@@ -33,14 +33,14 @@
     }
 
     function search(word) {
-        let word = word.toLowerCase();
+        let search_word = word.toLowerCase();
         // get exact match
-        if (metadata.hasOwnProperty(word)) {
-            create_word_element(word, metadata[word]);
+        if (metadata.hasOwnProperty(search_word)) {
+            create_word_element(search_word, metadata[search_word]);
         }
         // get containing words
         for (let check_word of metadata.entries()) {
-            if (check_word.includes(word)) {
+            if (check_word.includes(search_word)) {
                 create_word_element(check_word, metadata[check_word]);
             }
         }

@@ -28,7 +28,8 @@
         let to_destroy = document.getElementsByClassName("word_box");
 
         for (let td of to_destroy) {
-            mb.removeChild(td);
+            //mb.removeChild(td);
+            document.removeChild(td);
         }
     }
 
@@ -40,6 +41,9 @@
         }
         // get containing words
         for (let check_word in metadata) {
+            if (search_word == check_word) {
+                continue;
+            }
             if (check_word.includes(search_word)) {
                 create_word_element(check_word, metadata[check_word]);
             }

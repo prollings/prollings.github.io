@@ -25,9 +25,9 @@
     }
 
     function destroy_all_word_elements() {
-        while (document.getElementsByClassName("word_box").length) {
+        while (document.getElementsByClassName("word_box").length > 0) {
             let tr = document.getElementsByClassName("word_box")[0];
-            tr.parent.removeChild(tr);
+            tr.parentNode.removeChild(tr);
         }
     }
 

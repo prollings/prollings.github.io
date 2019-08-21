@@ -4,6 +4,23 @@
     let word_caption = document.getElementById("word_caption");
     let imgs = {};
 
+    function create_word_node(word) {
+        let cce = (parent, child_type) => parent.appendChild(document.createElement(child_type));
+        let mb = document.getElementById("main_box");
+        let word_node = cce(mb, 'div');
+        let wn_text = cce(word_node, 'p');
+        let wn_img_container = cce(word_node, 'div');
+        let wn_img = cce(wn_img_container, 'img');
+
+        word_node.className = "word_box";
+        wn_text.className = "word_text";
+        wn_text.innerHTML = word;
+
+        wn_img_container.className = "word_img_container";
+        wn_img.className = "word_img";
+        wn_img.setAttribute('src', 'assets/' + word + '.svg');
+    }
+
     function image_loaded(file_name, img) {
         // lower case of word and remove symbols and abv marker
         // store original word (with capital and/or apostrophe) in `display`

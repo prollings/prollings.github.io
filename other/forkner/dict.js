@@ -15,7 +15,7 @@
 
         wn_img_container.className = "word_img_container";
         wn_img.className = "word_img";
-        wn_img.setAttribute('src', 'assets/' + word + '.svg');
+        wn_img.setAttribute('src', 'assets/dict/' + word + '.svg');
     }
 
     window.onload = () => {

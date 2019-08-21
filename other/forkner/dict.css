@@ -27,9 +27,9 @@
     padding: 10px;
     background-color: #f5f5f5;
 }
-#img_container {
+.img_container {
     padding: 40;
 }
-#img_box {
+.img_box {
     transform: scale(3);
 }

@@ -14,6 +14,7 @@
         centres[i] = (i + 1) * cell_size + (cell_size / 2);
     }
     let minor_centre = rad + padding;
+    let child_coords = [];
 
     let offscreen_canvas = (() => {
         let os_canvas = document.createElement("canvas");
@@ -24,9 +25,15 @@
 
     let offscreen_ctx = offscreen_canvas.getContext("2d");
 
-    function fill_canvas() {
-        ctx.fillStyle = '#333333';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+    function fill_canvas(this_ctx, col) {
+        if (this_ctx == undefined) {
+            this_ctx = ctx;
+        }
+        if (col == undefined) {
+            col = '#333333';
+        }
+        this_ctx.fillStyle = col;
+        this_ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
 
     function draw_circle(x, y, rad, col, fill) {
@@ -55,7 +62,7 @@
 
     function draw_master(num) {
         let pos = (num + 1) * cell_size + padding;
-        let col = `hsl(${colours[num]}, 90%, 65%)`;
+        let col = `hsl(${colours[num]}, 80%, 70%)`;
         // row
         draw_circle(pos, padding, rad, col, false);
         // column
@@ -98,6 +105,10 @@
         };
     }
 
+    function get_last_child_coords(row_parent, col_parent) {
+
+    }
+
     function draw_child_point(row_parent, col_parent) {
         let c = get_child_coords(row_parent, col_parent);
         draw_point(c.x, c.y, 3, 'white');
@@ -106,11 +117,18 @@
     function draw_child(row_parent, col_parent) {
         let pos = get_child_coords(row_parent, col_parent);
         let hue = colours[row_parent] + colours[col_parent] / 2;
-        let col = `hsl(${hue}, 90%, 64%)`
-        draw_point(pos.x, pos.y, 1, col, offscreen_ctx);
+        let col = `hsl(${hue}, 75%, 75%)`;
+        draw_point(pos.x, pos.y, 1.5, col, offscreen_ctx);
     }
 
-    function do_things(time) {
+    document.addEventListener("keypress", (ev) => {
+        if (ev.key == " ") {
+            console.log("HAI");
+            fill_canvas(offscreen_ctx);
+        }
+    });
+
+    function render(time) {
         time = time / 1000.0;
         let dt = (time - last);
         last = time;
@@ -124,6 +142,7 @@
         }
         // draw stuff
         fill_canvas();
+        ctx.drawImage(offscreen_canvas, 0, 0);
         for (let i = 0; i < num_masters; i++) {
             draw_master(i);
             draw_master_lines(i);
@@ -134,17 +153,12 @@
                 draw_child(row, col);
             }
         }
-        ctx.drawImage(offscreen_canvas, 0, 0);
         for (let col = 0; col < num_masters; col++) {
             for (let row = 0; row < num_masters; row++) {
                 draw_child_point(row, col);
             }
         }
-        requestAnimationFrame(do_things);
+        requestAnimationFrame(render);
     }
-
-    requestAnimationFrame(do_things);
-
-    fill_canvas();
-    
+    requestAnimationFrame(render);
 })();

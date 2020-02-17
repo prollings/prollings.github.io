@@ -1,8 +1,8 @@
 (() => {
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
-    let num_masters = 8;
-    let cell_size = canvas.width / num_masters; // including padding
+    let num_masters = 7;
+    let cell_size = canvas.width / (num_masters + 1); // including padding
     let padding = canvas.width / 150;
     let rad = (cell_size - (padding * 2)) / 2;
     let last = performance.now() / 1000.0;
@@ -121,7 +121,7 @@
         draw_point(pos.x, pos.y, 1.5, col, offscreen_ctx);
     }
 
-    document.addEventListener("keypress", (ev) => {
+    document.addEventListener("keyup", (ev) => {
         if (ev.key == " ") {
             fill_canvas(offscreen_ctx);
         }

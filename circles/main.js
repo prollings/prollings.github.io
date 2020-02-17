@@ -123,10 +123,13 @@
 
     document.addEventListener("keypress", (ev) => {
         if (ev.key == " ") {
-            console.log("HAI");
             fill_canvas(offscreen_ctx);
         }
     });
+
+    document.getElementById("blank").onclick = () => {
+        fill_canvas(offscreen_ctx);
+    }
 
     function render(time) {
         time = time / 1000.0;

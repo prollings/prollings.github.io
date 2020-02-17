@@ -83,7 +83,7 @@
         let col_y = pos.y + minor_centre;
         let row_x = pos.x + minor_centre;
         let row_y = pos.y + centres[num];
-        ctx.strokeStyle = '#555555';
+        ctx.strokeStyle = '#777777';
         ctx.setLineDash([3, 5]);
         ctx.lineWidth = 1;
         // vertical

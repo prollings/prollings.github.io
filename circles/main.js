@@ -154,10 +154,6 @@
         for (let col = 0; col < num_masters; col++) {
             for (let row = 0; row < num_masters; row++) {
                 draw_child(row, col);
-            }
-        }
-        for (let col = 0; col < num_masters; col++) {
-            for (let row = 0; row < num_masters; row++) {
                 draw_child_point(row, col);
             }
         }

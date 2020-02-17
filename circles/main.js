@@ -116,9 +116,17 @@
 
     function draw_child(row_parent, col_parent) {
         let pos = get_child_coords(row_parent, col_parent);
-        let hue = colours[row_parent] + colours[col_parent] / 2;
-        let col = `hsl(${hue}, 75%, 75%)`;
-        draw_point(pos.x, pos.y, 1.5, col, offscreen_ctx);
+        let row_colour = colours[row_parent];
+        let col_colour = colours[col_parent];
+        let max_colour = Math.max(row_colour, col_colour);
+        let min_colour = Math.min(row_colour, col_colour);
+        if (max_colour > 180) {
+            min_colour += 360;
+        }
+        let colour_dif = Math.abs(max_colour - min_colour);
+        let hue = Math.max(min_colour, max_colour) - (colour_dif / 3);
+        let colour = `hsl(${hue}, 75%, 75%)`;
+        draw_point(pos.x, pos.y, 1.5, colour, offscreen_ctx);
     }
 
     document.addEventListener("keyup", (ev) => {

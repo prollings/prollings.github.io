@@ -6,15 +6,33 @@
     let padding = canvas.width / 150;
     let rad = (cell_size - (padding * 2)) / 2;
     let last = performance.now() / 1000.0;
-
     let coords = [0, 0, 0, 0, 0, 0, 0];
+
     let colours = [0, 30, 60, 120, 180, 240, 300];
+    for (let i = 0; i < colours.length; i++) {
+        colours[i] = hsl_to_cmyk(colours[i], 75, 60);
+    }
+    let child_colours = [];
+    for (let row = 0; row < num_masters; row++) {
+        child_colours[row] = [];
+        for (let col = 0; col < num_masters; col++) {
+            let mixed = mix_cmy(colours[row], colours[col]);
+            child_colours[row][col] = cmyk_to_rgb(mixed)
+                .map((el) => el.toString(16).padStart(2, '0'))
+                .reduce((acc, v) => acc + v, "#");
+        }
+    }
+    for (let i = 0; i < colours.length; i++) {
+        colours[i] = cmyk_to_rgb(colours[i])
+            .map((el) => el.toString(16).padStart(2, '0'))
+            .reduce((acc, v) => acc + v, "#");
+    }
+
     let centres = [];
     for (let i = 0; i < num_masters; i++) {
         centres[i] = (i + 1) * cell_size + (cell_size / 2);
     }
     let minor_centre = rad + padding;
-    let child_coords = [];
 
     let offscreen_canvas = (() => {
         let os_canvas = document.createElement("canvas");
@@ -24,6 +42,57 @@
     })();
 
     let offscreen_ctx = offscreen_canvas.getContext("2d");
+
+    function hsl_to_cmyk(h, s, l) {
+        h = h / 360.0;
+        s = s / 100.0;
+        l = l / 100.0;
+        let hue_to_rgb = (p, q, t) => {
+            if (t < 0) t += 1;
+            if (t > 1) t -= 1;
+            if (t < 1/6) return p + (q - p) * 6 * t;
+            if (t < 1/2) return q;
+            if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+            return p;
+        }
+        let q = (l < 0.5) ? l * (1 + s) : (l + s - l * s);
+        let p = 2 * l - q;
+        let r = hue_to_rgb(p, q, h + 1/3);
+        let g = hue_to_rgb(p, q, h);
+        let b = hue_to_rgb(p, q, h - 1/3);
+
+        let c = 1 - r;
+        let m = 1 - g;
+        let y = 1 - b;
+        let k = Math.min(c, m, y);
+        c = (c - k) / (1 - k);
+        m = (m - k) / (1 - k);
+        y = (y - k) / (1 - k);
+
+        return [c, m, y, k];
+    }
+
+    function cmyk_to_rgb (col) {
+        let c = col[0];
+        let m = col[1];
+        let y = col[2];
+        let k = col[3];
+        c = c * (1 - k) + k;
+        m = m * (1 - k) + k;
+        y = y * (1 - k) + k;
+        let r = Math.round((1 - c) * 255);
+        let g = Math.round((1 - m) * 255);
+        let b = Math.round((1 - y) * 255);
+        return [r, g, b];
+    }
+
+    function mix_cmy(col_1, col_2) {
+        let new_col = [0,0,0,0];
+        for (let i = 0; i < new_col.length; i++) {
+            new_col[i] = (col_1[i] + col_2[i]) / 2;
+        }
+        return new_col;
+    }
 
     function fill_canvas(this_ctx, col) {
         if (this_ctx == undefined) {
@@ -62,11 +131,11 @@
 
     function draw_master(num) {
         let pos = (num + 1) * cell_size + padding;
-        let col = `hsl(${colours[num]}, 80%, 70%)`;
+        let colour = colours[num];
         // row
-        draw_circle(pos, padding, rad, col, false);
+        draw_circle(pos, padding, rad, colour, false);
         // column
-        draw_circle(padding, pos, rad, col, false);
+        draw_circle(padding, pos, rad, colour, false);
     }
 
     function draw_master_points(num) {
@@ -116,16 +185,7 @@
 
     function draw_child(row_parent, col_parent) {
         let pos = get_child_coords(row_parent, col_parent);
-        let row_colour = colours[row_parent];
-        let col_colour = colours[col_parent];
-        let max_colour = Math.max(row_colour, col_colour);
-        let min_colour = Math.min(row_colour, col_colour);
-        if (max_colour > 180) {
-            min_colour += 360;
-        }
-        let colour_dif = Math.abs(max_colour - min_colour);
-        let hue = Math.max(min_colour, max_colour) - (colour_dif / 3);
-        let colour = `hsl(${hue}, 75%, 75%)`;
+        let colour = child_colours[row_parent][col_parent];
         draw_point(pos.x, pos.y, 1.5, colour, offscreen_ctx);
     }
 

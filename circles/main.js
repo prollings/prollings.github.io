@@ -9,21 +9,21 @@
     let coords = [0, 0, 0, 0, 0, 0, 0];
 
     let colours = [0, 30, 60, 120, 180, 240, 300];
-    for (let i = 0; i < colours.length; i++) {
-        colours[i] = hsl_to_cmyk(colours[i], 75, 60);
-    }
     let child_colours = [];
     for (let row = 0; row < num_masters; row++) {
         child_colours[row] = [];
+        let row_cmyk = hsl_to_cmyk(colours[row], 100, 70);
         for (let col = 0; col < num_masters; col++) {
-            let mixed = mix_cmy(colours[row], colours[col]);
+            let col_cmyk = hsl_to_cmyk(colours[col], 100, 70);
+            let mixed = mix_cmy(row_cmyk, col_cmyk);
             child_colours[row][col] = cmyk_to_rgb(mixed)
                 .map((el) => el.toString(16).padStart(2, '0'))
                 .reduce((acc, v) => acc + v, "#");
         }
     }
     for (let i = 0; i < colours.length; i++) {
-        colours[i] = cmyk_to_rgb(colours[i])
+        let cmyk = hsl_to_cmyk(colours[i], 75, 60);
+        colours[i] = cmyk_to_rgb(cmyk)
             .map((el) => el.toString(16).padStart(2, '0'))
             .reduce((acc, v) => acc + v, "#");
     }
